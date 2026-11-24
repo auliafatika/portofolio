@@ -1,35 +1,64 @@
-export default function App() {
+import { useEffect, useState } from 'react'
+import ContactSection from './components/ContactSection'
+import Hero from './components/Hero'
+import ProfilePage from './components/ProfilePage'
+import ProfilePanel from './components/ProfilePanel'
+import ProjectGrid from './components/ProjectGrid'
+import ProjectPage from './components/ProjectPage'
+import SectionRail from './components/SectionRail'
+import SkipLink from './components/SkipLink'
+import { projects } from './data/portfolio'
+import { Link, parseRoute, type Route } from './router'
+
+function NotFound() {
   return (
-    <main className="flex min-h-screen items-center justify-center px-6 py-20">
-      <div className="w-full max-w-2xl">
-        <p className="font-mono text-xs font-semibold tracking-[0.2em] text-ink-muted uppercase">
-          NEXUS PUBLISHING — SYSTEM ARCHITECTURE TOPOLOGY V.2
-        </p>
-        <h1 className="mt-4 font-display text-5xl font-medium leading-[1.04] tracking-tight text-secondary sm:text-6xl">
-          Synapse
-        </h1>
-        <p className="mt-3 font-display text-2xl font-medium text-ink">Mapping the Mind</p>
-        <p className="mt-6 max-w-xl font-mono text-sm leading-relaxed text-ink-muted">
-          The spatial mapping of artificial consciousness. React + TypeScript + Tailwind CSS
-          siap untuk dikembangkan.
-        </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <button
-            type="button"
-            className="rounded-control bg-primary px-5 py-2.5 font-mono text-xs font-semibold text-white transition-opacity hover:opacity-90"
-          >
-            Explore interface
-          </button>
-          <a
-            href="https://tailwindcss.com/docs"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-control border border-line px-5 py-2.5 font-mono text-xs font-semibold text-ink transition-colors hover:bg-secondary hover:text-white"
-          >
-            Tailwind docs
-          </a>
-        </div>
+    <main id="main" className="min-w-0 px-4 pt-24 pb-32 sm:px-8 md:px-12 lg:px-16">
+      <div className="mx-auto max-w-6xl">
+        <h1 className="font-display text-4xl font-medium text-secondary">Page not found</h1>
+        <p className="mt-4 text-body-md text-ink-muted">This case study does not exist.</p>
+        <Link
+          href="/"
+          className="mt-8 inline-flex min-h-11 items-center rounded-pill bg-primary px-6 font-mono text-label-md font-semibold text-canvas focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        >
+          Back to home
+        </Link>
       </div>
     </main>
+  )
+}
+
+export default function App() {
+  const [route, setRoute] = useState<Route>(parseRoute)
+
+  useEffect(() => {
+    const sync = () => setRoute(parseRoute())
+    window.addEventListener('popstate', sync)
+    return () => window.removeEventListener('popstate', sync)
+  }, [])
+
+  const project =
+    route.name === 'project' ? projects.find((item) => item.slug === route.slug) ?? null : null
+
+  return (
+    <>
+      <SkipLink />
+      <SectionRail />
+
+      {route.name === 'home' && (
+        <main id="main" className="min-w-0 pb-24">
+          <Hero />
+          <ProfilePanel />
+          <ProjectGrid />
+        </main>
+      )}
+
+      {route.name === 'profile' && <ProfilePage />}
+
+      {route.name === 'project' && (project ? <ProjectPage project={project} /> : <NotFound />)}
+
+      {route.name === 'notFound' && <NotFound />}
+
+      <ContactSection />
+    </>
   )
 }

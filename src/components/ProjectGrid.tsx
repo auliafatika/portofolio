@@ -1,0 +1,29 @@
+import { projects } from '../data/portfolio'
+import ProjectCard from './ProjectCard'
+
+export default function ProjectGrid() {
+  return (
+    <section
+      id="proyek"
+      aria-labelledby="proyek-title"
+      className="scroll-mt-20 px-4 py-16 sm:px-8 md:px-12 md:py-24 lg:px-16"
+    >
+      <div className="mx-auto max-w-6xl">
+        <div className="flex items-baseline justify-between gap-4">
+          <h2 id="proyek-title" className="font-display text-3xl font-medium tracking-tight text-secondary sm:text-4xl">
+            Selected work
+          </h2>
+          <span className="font-mono text-label-md tabular-nums text-ink-muted">{projects.length} case studies</span>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {projects.map((project) => (
+            <div key={project.slug} className={project.featured ? 'min-w-0 sm:col-span-2' : 'min-w-0'}>
+              <ProjectCard project={project} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
