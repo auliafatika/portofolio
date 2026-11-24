@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* `static` menyimpan semua token meski belum dipakai di class. */
+@theme static {
+  /* Palet dari docs/DESIGN.md */
+  --color-primary: #0a1fdb;
+  --color-secondary: #111111;
+  --color-accent: #0a1fdb;
+  --color-canvas: #f4f4f0;
+  --color-surface: #555555;
+  --color-ink: #111827;
+  --color-ink-muted: #4b5563;
+  --color-line: #555555;
+
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --spacing-card: 24px;
+  --spacing-section: 80px;
+
+  --radius-card: 1px;
+  --radius-control: 8px;
+  --radius-pill: 9999px;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-canvas);
+    color: var(--color-ink);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-mono);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+}
