@@ -7,7 +7,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/work/${project.slug}`}
-      className="group flex min-w-0 flex-col rounded-card bg-surface/[0.06] p-card transition-[transform,background-color] duration-150 hover:-translate-y-0.5 hover:bg-surface/[0.12] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+      className="group flex min-w-0 flex-col rounded-card bg-surface/[0.03] p-card transition-[transform,background-color] duration-150 hover:-translate-y-0.5 hover:bg-surface/[0.07] focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
     >
       <Media
         asset={project.showcase}

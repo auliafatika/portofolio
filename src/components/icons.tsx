@@ -84,3 +84,44 @@ export function ExternalIcon({ className = 'size-4' }: IconProps) {
     </svg>
   )
 }
+
+export function LinkedinIcon({ className = 'size-4' }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <rect x="3" y="3" width="18" height="18" rx="3" />
+      <path d="M8 10v7" />
+      <path d="M8 7.5v.5" />
+      <path d="M12 17v-4a2 2 0 0 1 4 0v4" />
+    </svg>
+  )
+}
+
+export function BehanceIcon({ className = 'size-4' }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <text
+        x="12"
+        y="16"
+        textAnchor="middle"
+        fontSize="11"
+        fontFamily="Inter, sans-serif"
+        fontWeight="600"
+        fill="currentColor"
+        stroke="none"
+      >
+        Bē
+      </text>
+    </svg>
+  )
+}
+
+export function DribbbleIcon({ className = 'size-4' }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M5.5 6.5c4 3 7 7 8.5 13" />
+      <path d="M3.5 13c5-2 10-1 14 3" />
+      <path d="M8 3.5c4 4 6 9 6.5 16" />
+    </svg>
+  )
+}

@@ -12,9 +12,14 @@ export type Experience = {
   highlights: string[]
 }
 
+export type ProcessImage = ImageAsset & {
+  description?: string
+}
+
 export type ProcessStep = {
-  description: string
-  images: ImageAsset[]
+  label?: string
+  description?: string
+  images: ProcessImage[]
 }
 
 export type ProjectProcess = {

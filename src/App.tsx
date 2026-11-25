@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ContactSection from './components/ContactSection'
 import Hero from './components/Hero'
 import ProfilePage from './components/ProfilePage'
@@ -8,6 +8,7 @@ import ProjectPage from './components/ProjectPage'
 import SectionRail from './components/SectionRail'
 import SkipLink from './components/SkipLink'
 import { projects } from './data/portfolio'
+import { usePageAnimation } from './hooks/usePageAnimation'
 import { Link, parseRoute, type Route } from './router'
 
 function NotFound() {
@@ -29,6 +30,10 @@ function NotFound() {
 
 export default function App() {
   const [route, setRoute] = useState<Route>(parseRoute)
+  const pageRef = useRef<HTMLDivElement>(null)
+  const curtainRef = useRef<HTMLDivElement>(null)
+  const routeKey = route.name === 'project' ? `project:${route.slug}` : route.name
+  usePageAnimation(pageRef, curtainRef, routeKey)
 
   useEffect(() => {
     const sync = () => setRoute(parseRoute())
@@ -42,6 +47,13 @@ export default function App() {
   return (
     <>
       <SkipLink />
+      <div ref={pageRef}>
+      <div
+        ref={curtainRef}
+        aria-hidden="true"
+        className="pointer-events-none fixed inset-0 z-50 bg-primary"
+        style={{ transform: 'translateY(-100%)' }}
+      />
       <SectionRail />
 
       {route.name === 'home' && (
@@ -59,6 +71,7 @@ export default function App() {
       {route.name === 'notFound' && <NotFound />}
 
       <ContactSection />
+      </div>
     </>
   )
 }
