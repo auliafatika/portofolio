@@ -14,6 +14,7 @@ const imageStep = (
 export const profile: Profile = {
   name: 'Aulia Fatika Rahmadani',
   role: 'UI/UX Designer',
+  heroRole: 'UI/UX Designer, Product Designer & Web Development',
   location: 'Semarang, Central Java, Indonesia',
   coordinates: 'LAT -6.99  LON 110.42',
   status: 'SYS/READY',

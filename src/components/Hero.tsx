@@ -29,7 +29,7 @@ export default function Hero() {
               {profile.name}
             </h1>
             <p data-enter className="mt-4 font-mono text-label-md font-semibold tracking-[0.12em] text-primary">
-              {profile.role}
+              {profile.heroRole}
             </p>
             <p data-enter className="mt-8 max-w-xl font-display text-2xl font-medium leading-tight text-ink sm:text-3xl">
               {profile.intro}

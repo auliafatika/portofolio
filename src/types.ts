@@ -81,6 +81,7 @@ export type Certification = {
 export type Profile = {
   name: string
   role: string
+  heroRole: string
   location: string
   coordinates: string
   status: string

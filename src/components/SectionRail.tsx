@@ -34,12 +34,12 @@ export default function SectionRail() {
       if (!panelRef.current) return
       gsap.fromTo(
         panelRef.current,
-        { yPercent: 100 },
+        { yPercent: -100, transformOrigin: '50% 0%' },
         { yPercent: 0, duration: 0.5, ease: 'power3.out' },
       )
       gsap.fromTo(
         '[data-menu-item]',
-        { autoAlpha: 0, y: 16 },
+        { autoAlpha: 0, y: -12 },
         { autoAlpha: 1, y: 0, duration: 0.4, stagger: 0.06, ease: 'power2.out' },
       )
     })
@@ -122,9 +122,8 @@ export default function SectionRail() {
                   data-menu-item
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 font-display text-2xl font-medium text-secondary transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                  className="font-display text-lg font-medium text-secondary transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
                 >
-                  <span aria-hidden="true" className="size-2 shrink-0 rounded-pill bg-primary" />
                   {item.label}
                 </Link>
               ))}
