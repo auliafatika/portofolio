@@ -1,6 +1,6 @@
 # Image assets
 
-Semua gambar di sini sudah dikonversi ke **WebP** dan dikompresi ke **< 100 KB per file** (total ~2,3 MB, turun ~94% dari sumber ~35 MB). Aplikasi memuat path ini dari `src/data/portfolio.ts`; sebelum file ada, tampilannya memakai placeholder bertanda `TODO`.
+Semua gambar konten sudah dikonversi ke **WebP** dan dikompresi ke **< 100 KB per file** (total ~2,3 MB, turun ~94% dari sumber ~35 MB). Aplikasi memuat path ini dari `src/data/portfolio.ts`; sebelum file ada, tampilannya memakai placeholder bertanda `TODO`. Pengecualian: `og-preview.jpg` di root adalah kartu preview media sosial (lihat catatan).
 
 Ukuran gambar sudah diskalakan ke sekitar 2× lebar tampilan di website (retina), jadi tetap tajam saat ditampilkan. Kualitas WebP berkisar q70–q88, disesuaikan per gambar agar tetap di bawah 100 KB.
 
@@ -36,6 +36,7 @@ Nama file yang terpasang saat ini:
 
 ## Catatan
 
+- `og-preview.jpg` (1200 × 630, 93 KB) dipakai sebagai `og:image` dan `twitter:image` di `index.html`. Format JPG dipilih karena kompatibel dengan semua crawler media sosial (WhatsApp, LinkedIn, Facebook, X). URL gambar dan `canonical` memakai `https://www.auliafatika.site/`.
 - Setelah menaruh file, refresh browser. Kalau browser menyimpan respons 404 lama, hard-refresh (Ctrl+F5).
 - Teks alt sudah diatur di `src/data/portfolio.ts`; deskripsikan isi gambar dengan singkat.
 - Jangan pakai gambar berhak cipta tanpa izin.
