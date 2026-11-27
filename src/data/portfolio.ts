@@ -19,10 +19,10 @@ export const profile: Profile = {
   coordinates: 'LAT -6.99  LON 110.42',
   status: 'SYS/READY',
   photo: {
-    src: '/images/profile/me.jpg',
+    src: '/images/profile/me.webp',
     alt: 'Portrait of Aulia Fatika Rahmadani, UI/UX Designer',
-    width: 2359,
-    height: 3145,
+    width: 800,
+    height: 1067,
   },
   intro: 'I build clean, intuitive screens people actually enjoy using.',
   bio: [
@@ -77,10 +77,10 @@ export const projects: Project[] = [
     title: 'KOLABORASI',
     summary: 'A corporate website redesign with responsive wireframes and components for desktop and mobile.',
     showcase: {
-      src: '/images/projects/kolaborasi/showcase.jpg',
+      src: '/images/projects/kolaborasi/showcase.webp',
       alt: 'Showcase image for the KOLABORASI project',
-      width: 5760,
-      height: 3240,
+      width: 1440,
+      height: 810,
     },
     categories: ['Web', 'Redesign'],
     featured: true,
@@ -112,31 +112,31 @@ Complete overhaul of core marketing and venture-showcase pages, responsive break
           images: [],
         },
         designSystem: imageStep(
-          '/images/projects/kolaborasi/design-process/design-system.png',
+          '/images/projects/kolaborasi/design-process/design-system.webp',
           'KOLABORASI design system',
           1203,
           736,
           `Built a scalable token and component library in Figma featuring standardized typography scales, high-contrast monochrome + coral-red accent palettes, responsive grids, buttons, cards, and navigation states using Auto Layout and Variants.`,
         ),
         loFi: imageStep(
-          '/images/projects/kolaborasi/design-process/lofi.png',
+          '/images/projects/kolaborasi/design-process/lofi.webp',
           'KOLABORASI low-fidelity wireframes',
-          1920,
-          1031,
+          1792,
+          962,
           `Mapped structural wireframes to validate content hierarchy, section pacing, and responsive stacking behavior before applying visual styling.`,
         ),
         hiFi: imageStep(
-          '/images/projects/kolaborasi/design-process/hifi%20new.png',
+          '/images/projects/kolaborasi/design-process/hifi%20new.webp',
           'KOLABORASI high-fidelity design',
-          1920,
-          1034,
+          1792,
+          965,
           `Crafted polished desktop and mobile screens combining bold Swiss-editorial typography, high-contrast dark/light section blocks, custom spot illustrations, and structured venture showcase cards.`,
         ),
         prototyping: imageStep(
-          '/images/projects/kolaborasi/design-process/prototyping.png',
+          '/images/projects/kolaborasi/design-process/prototyping.webp',
           'KOLABORASI prototype',
-          1920,
-          1037,
+          1600,
+          864,
           `Linked desktop and mobile flows into interactive Figma prototypes simulating real scrolling transitions, hover states, and responsive navigation menus.`,
         ),
       },
@@ -150,10 +150,10 @@ Complete overhaul of core marketing and venture-showcase pages, responsive break
     title: 'Joynest',
     summary: 'A safe digital space for mental health, with guided meditation and mood tracking.',
     showcase: {
-      src: '/images/projects/joynest/showchase.jpg',
+      src: '/images/projects/joynest/showchase.webp',
       alt: 'Showcase image for the Joynest project',
-      width: 3840,
-      height: 2160,
+      width: 1600,
+      height: 900,
     },
     categories: ['Mobile', 'Health'],
     detail: {
@@ -180,19 +180,19 @@ Complete mobile app design covering onboarding, emotional check-ins, self-care a
           description: '',
           images: [
             {
-              src: '/images/projects/joynest/design-process/IA.jpg',
+              src: '/images/projects/joynest/design-process/IA.webp',
               alt: 'Joynest information architecture',
-              width: 6240,
-              height: 4000,
+              width: 1792,
+              height: 1149,
               description: `Structured the app around five primary destinations: Beranda, Meditasi, Obrolan, Jurnal, and Konseling, supported by secondary utilities on Beranda (Profil, Streak, Notifikasi, and Mood Tracker).
 
 Connected recurring vertical modules across sections, including Perkembangan Emosi, Meditasi Mindfulness, Meditasi Terpadu, Jurnal Buat Kamu, Sesi Konseling, Riwayat Jurnal, Layanan Konseling, and Artikel Terkait, so self-care prompts and educational articles stay accessible as users scroll.`,
             },
             {
-              src: '/images/projects/joynest/design-process/user%20flow.jpg',
+              src: '/images/projects/joynest/design-process/user%20flow.webp',
               alt: 'Joynest user flow',
-              width: 11232,
-              height: 5952,
+              width: 1792,
+              height: 950,
               description: `Built an authentication entry check (Sudah Login / Sudah Punya Akun) that routes returning users straight to Beranda and guides new users through registration or login.
 
 Mapped dedicated end-to-end journeys from Beranda into Meditasi (articles, guided meditation, and breathing/music mindfulness), Obrolan (community threads, anonymous posting, and JoyBot character preferences/chat), Jurnal (selecting a journal type, writing, saving, and viewing history), and Konseling (choosing a counseling type, psychologist, payment, and consultation or reading articles).`,
@@ -200,7 +200,7 @@ Mapped dedicated end-to-end journeys from Beranda into Meditasi (articles, guide
           ],
         },
         designSystem: imageStep(
-          '/images/projects/joynest/design-process/design-system.png',
+          '/images/projects/joynest/design-process/design-system.webp',
           'Joynest design system',
           1260,
           956,
@@ -209,28 +209,28 @@ Mapped dedicated end-to-end journeys from Beranda into Meditasi (articles, guide
 Defined consistent cards, buttons, mood indicators, and navigation states to maintain visual harmony across sensitive mental health workflows.`,
         ),
         loFi: imageStep(
-          '/images/projects/joynest/design-process/lofi.png',
+          '/images/projects/joynest/design-process/lofi.webp',
           'Joynest low-fidelity wireframes',
-          1920,
-          1041,
+          1792,
+          972,
           `Created structural wireframes to validate screen layouts, content hierarchy, and flow sequence before applying final colors and illustrations.
 
 Tested early layouts for mood check-in cards, meditation audio players, journal prompts, and psychologist booking steps to keep every screen focused and easy to scan.`,
         ),
         hiFi: imageStep(
-          '/images/projects/joynest/design-process/hifi.png',
+          '/images/projects/joynest/design-process/hifi.webp',
           'Joynest high-fidelity design',
-          1920,
-          1031,
+          1792,
+          962,
           `Crafted polished mobile interfaces combining warm color palettes, approachable illustrations (including the JoyBot mascot and emotion check-in visuals), and clean card layouts.
 
 Balanced emotional warmth with clear action buttons so users can move smoothly between reflecting, calming down, chatting, and booking support.`,
         ),
         prototyping: imageStep(
-          '/images/projects/joynest/design-process/prototyping.png',
+          '/images/projects/joynest/design-process/prototyping.webp',
           'Joynest prototype',
-          1920,
-          1038,
+          1792,
+          969,
           `Connected key screens across onboarding, mood tracking, meditation, journaling, chat, and counseling flows into an interactive Figma prototype.
 
 Simulated end-to-end user journeys to verify navigation pacing, button placement, and screen transitions across core features.`,
@@ -246,10 +246,10 @@ Simulated end-to-end user journeys to verify navigation pacing, button placement
     title: 'Perhutani',
     summary: 'A landing page redesign for Perhutani, documented from the original design to the new direction.',
     showcase: {
-      src: '/images/projects/perhutani/showcase.png',
+      src: '/images/projects/perhutani/showcase.webp',
       alt: 'Showcase image for the Perhutani project',
-      width: 3840,
-      height: 2160,
+      width: 1280,
+      height: 720,
     },
     categories: ['Web', 'Redesign'],
     detail: {
@@ -271,7 +271,7 @@ Homepage redesign covering brand storytelling, forest management & sustainabilit
 - Reorganized the landing page into clear, scannable sections pairing forest photography and green brand accents with structured cards and concise copy.
 - Designed responsive desktop and mobile screens with consistent spacing and clear typographic hierarchy so users can grasp Perhutani's role and offerings quickly.`,
       before: {
-        src: '/images/projects/perhutani/design%20before.png',
+        src: '/images/projects/perhutani/design%20before.webp',
         alt: 'Perhutani landing page before the redesign',
         width: 1440,
         height: 1139,
@@ -285,28 +285,28 @@ Prioritized scannable headings and balanced content blocks so visitors can locat
           images: [],
         },
         designSystem: imageStep(
-          '/images/projects/perhutani/design-process/design%20system.png',
+          '/images/projects/perhutani/design-process/design%20system.webp',
           'Perhutani design system',
-          1920,
-          1037,
+          1792,
+          968,
           `Created a cohesive Figma design system anchored in Perhutani's green identity, clean typography, card layouts, and reusable UI components.
 
 Standardized spacing, buttons, and content blocks to keep desktop and mobile screens consistent and accessible.`,
         ),
         loFi: imageStep(
-          '/images/projects/perhutani/design-process/lofi.png',
+          '/images/projects/perhutani/design-process/lofi.webp',
           'Perhutani low-fidelity wireframes',
-          1920,
-          1036,
+          1792,
+          967,
           `Mapped out structural wireframes first to test section order, content density, and responsive stacking before applying visual styling.
 
 Validated how text blocks, imagery, and cards flow across desktop and mobile viewports to prevent clutter early on.`,
         ),
         hiFi: imageStep(
-          '/images/projects/perhutani/design-process/hifi.png',
+          '/images/projects/perhutani/design-process/hifi.webp',
           'Perhutani high-fidelity design',
-          1920,
-          1038,
+          1792,
+          969,
           `Translated wireframes into high-fidelity desktop and mobile interfaces featuring lush forest photography, green accents, structured grids, and clear callouts.
 
 Balanced visual warmth with readable typography so each section communicates its message clearly at a glance.`,
@@ -327,10 +327,10 @@ Allowed smooth review of how content adapts across screen sizes before finalizin
     title: 'Novacare',
     summary: 'A clinic management dashboard that brings scheduling and patient information into one view.',
     showcase: {
-      src: '/images/projects/novacare/showcase.png',
+      src: '/images/projects/novacare/showcase.webp',
       alt: 'Showcase image for the Novacare project',
-      width: 4110,
-      height: 2312,
+      width: 1792,
+      height: 1008,
     },
     categories: ['Dashboard', 'Health'],
     detail: {
@@ -359,7 +359,7 @@ Arranged the main dashboard view into logical operational zones so clinic staff 
           images: [],
         },
         designSystem: imageStep(
-          '/images/projects/novacare/design-process/design%20system.png',
+          '/images/projects/novacare/design-process/design%20system.webp',
           'Novacare design system',
           1339,
           890,
@@ -368,7 +368,7 @@ Arranged the main dashboard view into logical operational zones so clinic staff 
 Standardized reusable dashboard widgets, data tables, action buttons, and queue cards to ensure visual consistency and fast recognition across high-density screens.`,
         ),
         loFi: imageStep(
-          '/images/projects/novacare/design-process/lofi.png',
+          '/images/projects/novacare/design-process/lofi.webp',
           'Novacare low-fidelity wireframes',
           1440,
           1024,
@@ -377,7 +377,7 @@ Standardized reusable dashboard widgets, data tables, action buttons, and queue 
 Tested early layouts for queue tables, doctor availability cards, and checkout summaries to ensure dense clinical data remained easy to scan.`,
         ),
         hiFi: imageStep(
-          '/images/projects/novacare/design-process/hifi.png',
+          '/images/projects/novacare/design-process/hifi.webp',
           'Novacare high-fidelity design',
           1440,
           1024,
@@ -401,10 +401,10 @@ Enabled smooth end-to-end walkthroughs of front-desk operations to verify naviga
     title: 'Pantausiswa',
     summary: 'A teacher-parent communication app that makes reports and messages easier to follow.',
     showcase: {
-      src: '/images/projects/pantausiswa/showcase.png',
+      src: '/images/projects/pantausiswa/showcase.webp',
       alt: 'Showcase image for the Pantausiswa project',
-      width: 3840,
-      height: 2160,
+      width: 1600,
+      height: 900,
     },
     categories: ['Mobile', 'Education'],
     detail: {
@@ -431,7 +431,7 @@ End-to-end mobile experience covering invitation-code onboarding, student progre
           description: '',
           images: [
             {
-              src: '/images/projects/pantausiswa/design-process/userflow.png',
+              src: '/images/projects/pantausiswa/design-process/userflow.webp',
               alt: 'Pantausiswa user flow',
               width: 1280,
               height: 801,
@@ -442,7 +442,7 @@ Structured clear task paths for checking daily attendance and grade summaries, i
           ],
         },
         designSystem: imageStep(
-          '/images/projects/pantausiswa/design-process/design%20system.png',
+          '/images/projects/pantausiswa/design-process/design%20system.webp',
           'Pantausiswa design system',
           1740,
           983,
@@ -451,28 +451,28 @@ Structured clear task paths for checking daily attendance and grade summaries, i
 Created reusable UI components, progress rings, bar charts, teacher contact rows, and navigation bars to maintain visual consistency across team deliverables.`,
         ),
         loFi: imageStep(
-          '/images/projects/pantausiswa/design-process/lofi.png',
+          '/images/projects/pantausiswa/design-process/lofi.webp',
           'Pantausiswa low-fidelity wireframes',
-          1920,
-          1044,
+          1792,
+          974,
           `Created structural low-fidelity wireframes to align on screen hierarchy, reporting layouts, and messaging flows before applying final colors and illustrations.
 
 Tested early card arrangements for attendance summaries, subject grade charts, and teacher directories so dense student data stayed clean and easy to scan.`,
         ),
         hiFi: imageStep(
-          '/images/projects/pantausiswa/design-process/hifi.png',
+          '/images/projects/pantausiswa/design-process/hifi.webp',
           'Pantausiswa high-fidelity design',
-          1920,
-          1040,
+          1792,
+          971,
           `Crafted polished high-fidelity mobile screens pairing friendly classroom illustrations with clear data visualizations, scannable subject cards, and intuitive teacher messaging layouts.
 
 Balanced approachable visual warmth with structured reporting widgets so parents can review academic updates and contact teachers effortlessly.`,
         ),
         prototyping: imageStep(
-          '/images/projects/pantausiswa/design-process/prototyping.png',
+          '/images/projects/pantausiswa/design-process/prototyping.webp',
           'Pantausiswa prototype',
-          1919,
-          1034,
+          1792,
+          966,
           `Connected core user journeys in Figma into an interactive prototype covering account linking, dashboard navigation, grade and attendance inspection, notification checks, and teacher-parent chat.
 
 Enabled team walkthroughs and usability checks to refine flow clarity and interaction pacing ahead of competition deadlines.`,
@@ -524,7 +524,7 @@ export const documentations: Documentation[] = [
   {
     title: 'Internship',
     image: {
-      src: '/images/documentations/internship.png',
+      src: '/images/documentations/internship.webp',
       alt: 'Documentation from the UI/UX design internship',
       width: 899,
       height: 666,
@@ -535,10 +535,10 @@ export const documentations: Documentation[] = [
   {
     title: 'Project Base Learning',
     image: {
-      src: '/images/documentations/project%20base%20learning.png',
+      src: '/images/documentations/project%20base%20learning.webp',
       alt: 'Documentation from project-based learning',
-      width: 1135,
-      height: 847,
+      width: 900,
+      height: 672,
     },
     label: 'See documentation',
     url: null,
@@ -546,10 +546,10 @@ export const documentations: Documentation[] = [
   {
     title: 'UMKM Support',
     image: {
-      src: '/images/documentations/umkm%20support.png',
+      src: '/images/documentations/umkm%20support.webp',
       alt: 'Documentation from UMKM support activities',
-      width: 1234,
-      height: 813,
+      width: 900,
+      height: 593,
     },
     label: 'See documentation',
     url: null,
