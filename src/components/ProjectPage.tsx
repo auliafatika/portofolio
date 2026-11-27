@@ -2,6 +2,7 @@ import type { ProcessStep, Project } from '../types'
 import { Link } from '../router'
 import { ArrowLeftIcon } from './icons'
 import Media from './Media'
+import RichText from './RichText'
 
 export default function ProjectPage({ project }: { project: Project }) {
   const processSteps: [string, ProcessStep][] = [
@@ -60,33 +61,47 @@ export default function ProjectPage({ project }: { project: Project }) {
           </div>
         </dl>
 
-        <div className="mt-14 space-y-12">
+        <div className="mt-16 space-y-20">
           <section data-reveal aria-labelledby="detail-description">
             <h2 id="detail-description" className="font-display text-xl font-medium text-secondary">
               Project description
             </h2>
-            <p className="mt-3 text-body-md text-ink">{project.detail.description}</p>
+            <RichText className="mt-4" text={project.detail.description} />
+            {project.detail.before && (
+              <figure className="mt-6">
+                <Media
+                  asset={project.detail.before}
+                  className="h-auto w-full rounded-card"
+                  placeholderLabel="TODO: design before"
+                />
+                {project.detail.before.description && (
+                  <figcaption className="mt-3">
+                    <RichText text={project.detail.before.description} />
+                  </figcaption>
+                )}
+              </figure>
+            )}
           </section>
 
           <section data-reveal aria-labelledby="detail-overview">
             <h2 id="detail-overview" className="font-display text-xl font-medium text-secondary">
               Project overview
             </h2>
-            <p className="mt-3 text-body-md text-ink">{project.detail.overview}</p>
+            <RichText className="mt-4" text={project.detail.overview} />
           </section>
 
           <section data-reveal aria-labelledby="detail-problem">
             <h2 id="detail-problem" className="font-display text-xl font-medium text-secondary">
               Problem
             </h2>
-            <p className="mt-3 text-body-md text-ink">{project.detail.problem}</p>
+            <RichText className="mt-4" text={project.detail.problem} />
           </section>
 
           <section data-reveal aria-labelledby="detail-research">
             <h2 id="detail-research" className="font-display text-xl font-medium text-secondary">
               Research & solution
             </h2>
-            <p className="mt-3 text-body-md text-ink">{project.detail.researchAndSolution}</p>
+            <RichText className="mt-4" text={project.detail.researchAndSolution} />
           </section>
 
           <section data-reveal aria-labelledby="detail-process">
@@ -101,7 +116,7 @@ export default function ProjectPage({ project }: { project: Project }) {
                     <p className="font-mono text-label-md tabular-nums text-primary">
                       {String(index + 1).padStart(2, '0')} / {label}
                     </p>
-                    <div className="mt-4 grid gap-5">
+                    <div className="mt-6 grid gap-10">
                       {step.images.map((image, imageIndex) => (
                         <figure key={imageIndex} className="min-w-0">
                           <Media
@@ -110,12 +125,14 @@ export default function ProjectPage({ project }: { project: Project }) {
                             placeholderLabel={`TODO: ${label.toLowerCase()} image ${imageIndex + 1}`}
                           />
                           {image.description && (
-                            <figcaption className="mt-3 text-body-md text-ink">{image.description}</figcaption>
+                            <figcaption className="mt-5">
+                              <RichText text={image.description} />
+                            </figcaption>
                           )}
                         </figure>
                       ))}
                     </div>
-                    {step.description && <p className="mt-4 text-body-md text-ink">{step.description}</p>}
+                    {step.description && <RichText className="mt-5" text={step.description} />}
                   </li>
                 )
               })}
@@ -126,7 +143,7 @@ export default function ProjectPage({ project }: { project: Project }) {
             <h2 id="detail-learnings" className="font-display text-xl font-medium text-secondary">
               What I learned
             </h2>
-            <p className="mt-3 text-body-md text-ink">{project.detail.learnings}</p>
+            <RichText className="mt-4" text={project.detail.learnings} />
           </section>
         </div>
       </div>

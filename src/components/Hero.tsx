@@ -7,18 +7,10 @@ export default function Hero() {
     <section
       id="hero"
       aria-labelledby="hero-title"
-      className="scroll-mt-20 px-4 pt-10 pb-16 sm:px-8 md:px-12 md:pt-16 lg:px-16 lg:pb-24"
+      className="scroll-mt-20 px-4 pt-10 pb-[60px] sm:px-8 md:px-12 md:pt-16 lg:px-16"
     >
       <div className="mx-auto max-w-6xl">
-        <div data-enter className="flex flex-col gap-2 font-mono text-label-md text-ink-muted sm:flex-row sm:justify-between">
-          <span className="tabular-nums">{profile.coordinates}</span>
-          <span className="flex items-center gap-2">
-            <span aria-hidden="true" className="inline-block size-2 rounded-pill bg-primary" />
-            {profile.status}
-          </span>
-        </div>
-
-        <div className="mt-10 grid gap-10 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] lg:items-end lg:gap-16">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] lg:items-end lg:gap-16">
           <div data-enter>
             <Media
               asset={profile.photo}
@@ -44,7 +36,7 @@ export default function Hero() {
             </p>
             <div data-enter>
               <ButtonLink href="/profile" variant="secondary" showIcon>
-                Get to know me
+                More about me
               </ButtonLink>
             </div>
           </div>
@@ -52,9 +44,9 @@ export default function Hero() {
 
         <dl data-enter className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3">
           {[
-            ['50+', 'digital pages'],
-            ['5', 'active client projects'],
-            ['4', 'case studies'],
+            ['1+', 'hands-on experience'],
+            ['5', 'real-world projects'],
+            ['5+', 'case studies'],
           ].map(([value, label]) => (
             <div key={label} className="min-w-0">
               <dt className="font-mono text-label-md text-ink-muted">{label}</dt>

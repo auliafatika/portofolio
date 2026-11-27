@@ -1,6 +1,6 @@
 import { profile } from '../data/portfolio'
 import { Link } from '../router'
-import { ArrowLeftIcon } from './icons'
+import { ArrowLeftIcon, DownloadIcon } from './icons'
 import Media from './Media'
 
 export default function ProfilePage() {
@@ -30,12 +30,22 @@ export default function ProfilePage() {
               eager
             />
           </div>
-          <div data-reveal className="min-w-0 space-y-4 text-body-md text-ink">
-            {profile.bio.map((paragraph) => (
-              <p key={paragraph} className="max-w-2xl">
-                {paragraph}
-              </p>
-            ))}
+          <div data-reveal className="min-w-0">
+            <div className="space-y-4 text-body-md text-ink">
+              {profile.fullBio.map((paragraph) => (
+                <p key={paragraph} className="max-w-2xl">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <a
+              href="/CV-AULIA-FATIKA-RAHMADANI-2026.pdf"
+              download="CV-AULIA-FATIKA-RAHMADANI-2026.pdf"
+              className="mt-6 inline-flex min-h-11 items-center gap-2 rounded-pill bg-secondary px-5 font-mono text-label-md font-semibold text-canvas transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            >
+              Download CV
+              <DownloadIcon />
+            </a>
           </div>
         </div>
 
@@ -59,7 +69,7 @@ export default function ProfilePage() {
           <div className="grid gap-4">
             <div data-reveal className="rounded-card bg-surface/[0.03] p-card">
               <h2 className="font-display text-xl font-medium text-secondary">Skills & tools</h2>
-              <p className="mt-5 font-mono text-label-md font-semibold text-ink">Design</p>
+              <p className="mt-8 font-mono text-label-md font-semibold text-ink">Design</p>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {profile.skills.design.map((skill) => (
                   <li key={skill} className="rounded-pill bg-surface/10 px-3 py-1 font-mono text-label-md text-ink">
@@ -67,7 +77,7 @@ export default function ProfilePage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 font-mono text-label-md font-semibold text-ink">Soft skills</p>
+              <p className="mt-10 font-mono text-label-md font-semibold text-ink">Soft skills</p>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {profile.skills.soft.map((skill) => (
                   <li key={skill} className="rounded-pill bg-surface/10 px-3 py-1 font-mono text-label-md text-ink-muted">
@@ -75,7 +85,7 @@ export default function ProfilePage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 font-mono text-label-md font-semibold text-ink">Tools</p>
+              <p className="mt-10 font-mono text-label-md font-semibold text-ink">Tools</p>
               <ul className="mt-3 flex flex-wrap gap-2">
                 {profile.tools.map((tool) => (
                   <li key={tool} className="rounded-pill bg-surface/10 px-3 py-1 font-mono text-label-md text-ink">

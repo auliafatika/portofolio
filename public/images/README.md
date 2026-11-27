@@ -21,7 +21,7 @@ Tiap folder project berisi satu showcase, dan gambar design process masuk ke sub
 | `projects/<slug>/design-process/hifi-1.jpg` | Step 4, High-fidelity design |
 | `projects/<slug>/design-process/prototyping-1.jpg` | Step 5, Prototyping |
 
-KOLABORASI sudah terisi dengan `showcase.jpg` dan `design-process/{design-system,lofi,hifi,prototyping}.png` (hi-fi memakai `hifi new.png`). Joynest memakai `showchase.jpg` dan `design-process/{IA.jpg,user flow.jpg,design-system.png,lofi.png,hifi.png,prototyping.png}`; step IA & user flow memakai dua gambar dengan deskripsi masing-masing. Pantausiswa dan SIRATA masih placeholder.
+KOLABORASI sudah terisi dengan `showcase.jpg` dan `design-process/{design-system,lofi,hifi,prototyping}.png` (hi-fi memakai `hifi new.png`). Joynest memakai `showchase.jpg` dan `design-process/{IA.jpg,user flow.jpg,design-system.png,lofi.png,hifi.png,prototyping.png}`; step IA & user flow memakai dua gambar dengan deskripsi masing-masing. Perhutani memakai `showcase.png`, `design before.png` (ditampilkan di Project description), dan `design-process/{design system,lofi,hifi}.png`. Novacare memakai `showcase.png` dan `design-process/{design system,lofi,hifi}.png`. Pantausiswa memakai `showcase.png` dan `design-process/{userflow.png,design system.png,lofi.png,hifi.png,prototyping.png}`; step IA diganti menjadi User flow. Project SIRATA sudah dihapus.
 
 `<slug>` salah satu dari: `kolaborasi`, `joynest`, `pantausiswa`, `sirata`.
 

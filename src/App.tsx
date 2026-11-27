@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
+import Certifications from './components/Certifications'
 import ContactSection from './components/ContactSection'
+import Documentations from './components/Documentations'
 import Hero from './components/Hero'
 import ProfilePage from './components/ProfilePage'
 import ProfilePanel from './components/ProfilePanel'
@@ -61,6 +63,8 @@ export default function App() {
           <Hero />
           <ProfilePanel />
           <ProjectGrid />
+          <Certifications />
+          <Documentations />
         </main>
       )}
 

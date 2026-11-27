@@ -7,7 +7,7 @@ export default function ProfilePanel() {
     <section
       id="profil"
       aria-labelledby="profil-title"
-      className="scroll-mt-20 px-4 py-16 sm:px-8 md:px-12 md:py-24 lg:px-16"
+      className="scroll-mt-20 px-4 py-[60px] sm:px-8 md:px-12 lg:px-16"
     >
       <div className="mx-auto max-w-6xl">
         <div data-reveal className="flex items-baseline justify-between gap-4">
@@ -21,7 +21,7 @@ export default function ProfilePanel() {
         <Link
           data-reveal
           href="/profile"
-          className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-pill bg-surface/10 px-5 py-2.5 font-mono text-label-md font-semibold text-ink transition-colors hover:bg-surface/20 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          className="mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-pill bg-secondary px-5 py-2.5 font-mono text-label-md font-semibold text-canvas transition-opacity hover:opacity-90 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
         >
           View full profile
           <ArrowRightIcon />

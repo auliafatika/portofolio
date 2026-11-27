@@ -32,6 +32,7 @@ export type ProjectProcess = {
 
 export type ProjectDetail = {
   description: string
+  before?: ProcessImage
   timeline: string
   role: string
   overview: string
@@ -55,8 +56,26 @@ export type Project = {
 export type Contact = {
   email: string
   linkedin: string
-  behance: string | null
-  dribbble: string | null
+  behance: string
+  dribbble: string
+}
+
+export type Documentation = {
+  title: string
+  image: ImageAsset
+  label: string
+  url: string | null
+}
+
+export type Certification = {
+  title: string
+  issuer: string
+  score?: string
+  period: string
+  location?: string
+  documentLabel: string
+  documentUrl: string | null
+  kind: 'experience' | 'certification'
 }
 
 export type Profile = {
@@ -68,6 +87,7 @@ export type Profile = {
   photo: ImageAsset
   intro: string
   bio: string[]
+  fullBio: string[]
   experiences: Experience[]
   skills: { design: string[]; soft: string[] }
   tools: string[]

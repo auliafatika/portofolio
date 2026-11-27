@@ -5,12 +5,12 @@ export default function ContactSection() {
   return (
     <footer
       id="kontak"
-      className="scroll-mt-20 bg-secondary px-4 py-16 text-canvas sm:px-8 md:px-12 md:py-24 lg:px-16"
+      className="scroll-mt-20 bg-secondary px-4 py-[60px] text-canvas sm:px-8 md:px-12 lg:px-16"
     >
       <div className="mx-auto max-w-6xl">
         <p className="font-mono text-label-md text-canvas/70">Contact</p>
         <h2 data-reveal className="mt-4 max-w-2xl font-display text-3xl font-medium leading-tight tracking-tight text-balance sm:text-4xl">
-          Tell me about your project
+          Let's Work?
         </h2>
         <a
           data-reveal

@@ -57,6 +57,16 @@ export function UserIcon({ className = 'size-4' }: IconProps) {
   )
 }
 
+export function MenuIcon({ className = 'size-4' }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M4 7h16" />
+      <path d="M4 12h16" />
+      <path d="M4 17h16" />
+    </svg>
+  )
+}
+
 export function CloseIcon({ className = 'size-4' }: IconProps) {
   return (
     <svg {...base} className={className}>
@@ -103,7 +113,7 @@ export function BehanceIcon({ className = 'size-4' }: IconProps) {
         x="12"
         y="16"
         textAnchor="middle"
-        fontSize="11"
+        fontSize="13"
         fontFamily="Inter, sans-serif"
         fontWeight="600"
         fill="currentColor"
@@ -111,6 +121,45 @@ export function BehanceIcon({ className = 'size-4' }: IconProps) {
       >
         Bē
       </text>
+    </svg>
+  )
+}
+
+export function DownloadIcon({ className = 'size-4' }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M12 3v12" />
+      <path d="m7 10 5 5 5-5" />
+      <path d="M4 20h16" />
+    </svg>
+  )
+}
+
+export function BriefcaseIcon({ className = 'size-4' }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <rect x="3" y="7" width="18" height="13" rx="2" />
+      <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+      <path d="M3 12h18" />
+    </svg>
+  )
+}
+
+export function AwardIcon({ className = 'size-4' }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <circle cx="12" cy="9" r="5" />
+      <path d="m8.5 13.5-1.5 7L12 18l5 2.5-1.5-7" />
+    </svg>
+  )
+}
+
+export function DocumentIcon({ className = 'size-4' }: IconProps) {
+  return (
+    <svg {...base} className={className}>
+      <path d="M6 3h8l4 4v14H6z" />
+      <path d="M14 3v4h4" />
+      <path d="M9 12h6M9 16h6" />
     </svg>
   )
 }
