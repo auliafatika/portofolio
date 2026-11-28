@@ -22,7 +22,7 @@ export default function ProjectGrid() {
 
         <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {projects.map((project) => (
-            <div data-reveal key={project.slug} className={project.featured ? 'min-w-0 sm:col-span-2' : 'min-w-0'}>
+            <div data-reveal key={project.slug} className={project.wideCard ? 'min-w-0 sm:col-span-2' : 'min-w-0'}>
               <ProjectCard project={project} />
             </div>
           ))}

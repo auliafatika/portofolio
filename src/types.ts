@@ -39,7 +39,7 @@ export type ProjectDetail = {
   tools: string[]
   problem: string
   researchAndSolution: string
-  process: ProjectProcess
+  process?: ProjectProcess
   learnings: string
 }
 
@@ -50,6 +50,7 @@ export type Project = {
   showcase: ImageAsset
   categories: string[]
   featured?: boolean
+  wideCard?: boolean
   detail: ProjectDetail
 }
 

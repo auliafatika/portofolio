@@ -84,6 +84,7 @@ export const projects: Project[] = [
     },
     categories: ['Web', 'Redesign'],
     featured: true,
+    wideCard: true,
     detail: {
       description: `Redesigned the official corporate website for Kolaborasi.co, a venture-building company, during a UI/UX Designer Internship at CV. Techarea Indonesia Jaya (2025).
 
@@ -480,6 +481,75 @@ Enabled team walkthroughs and usability checks to refine flow clarity and intera
       },
       learnings: `- Learned how to collaborate effectively within a design team while aligning user needs with competition constraints and tight submission timelines.
 - Strengthened practical skills in turning student performance metrics and teacher-parent messaging into intuitive, consistent mobile interfaces.`,
+    },
+  },
+  {
+    slug: 'air-bersih-untuk-semua',
+    title: 'Air Bersih Untuk Semua',
+    summary: 'A public information website that makes clean water programs, progress, and updates easy to follow.',
+    showcase: {
+      src: '/images/projects/air%20bersih%20untuk%20semua/showcase.webp',
+      alt: 'Showcase image for the Air Bersih Untuk Semua project',
+      width: 1600,
+      height: 900,
+    },
+    categories: ['Web', 'Public Service'],
+    featured: true,
+    detail: {
+      description: `Air Bersih Untuk Semua is an information portal for Indonesia's clean water initiatives, bringing program updates, project progress, and public services together in one place.
+
+Designed as a calm, trustworthy web experience, the site helps communities understand where water infrastructure projects are running, what has been achieved, and how to reach the team with questions or complaints.`,
+      timeline: '2025',
+      role: 'UI/UX Designer',
+      overview: `UI/UX Designer (information architecture, wireframing, high-fidelity UI, and responsive layouts in Figma).
+
+Designed the full landing experience: an introduction to the initiative, a roadmap of milestones from 2023 to 2030, a browsable map of ongoing and completed water supply projects, news and event updates, and a direct channel for suggestions and complaints.`,
+      tools: ['Figma'],
+      problem: `- Information about clean water programs was spread across separate updates, making it hard for the public to see which projects were active and how the initiative was progressing.
+- Technical details about water supply systems needed a clearer structure so non-specialist visitors could still follow the story.
+- Visitors looking for updates or a way to send feedback had no obvious next step from the main page.`,
+      researchAndSolution: `- Reviewed how public-sector and infrastructure websites organize long-term programs, then grouped the content into goal-driven sections: About Us, Our Work, News & Event, Future Project, and Contact Us.
+- Mapped the 2023, 2024, and 2030 milestones into a simple timeline so visitors could understand the plan at a glance.
+
+- Designed a dedicated project section with map cards and clear ongoing/completed labels, so people can see where work is happening and what has been delivered.
+- Used a blue-and-white visual system, friendly illustrations, and prominent calls to action ("Lihat Proyek", "Saran & Keluhan", "Hubungi Kami") to make the portal feel approachable and easy to navigate.`,
+      learnings: `- Learned how to turn complex public infrastructure information into a clear, approachable narrative without losing important detail.
+- Strengthened skills in organizing roadmap, status, and news content into modular sections that stay readable across desktop and mobile screens.`,
+    },
+  },
+  {
+    slug: 'sirata',
+    title: 'Sirata',
+    summary: 'A correspondence management system that helps students submit letters and staff review them in one place.',
+    showcase: {
+      src: '/images/projects/sirata/showcase.webp',
+      alt: 'Showcase image for the Sirata project',
+      width: 1600,
+      height: 900,
+    },
+    categories: ['Web', 'Education'],
+    featured: true,
+    detail: {
+      description: `Sirata (Sistem Informasi Surat Menyurat) is a web-based platform for managing student correspondence at Politeknik Negeri Semarang.
+
+The system lets students submit different types of letter requests, while administrators can review, decide on, and archive those requests from a single dashboard.`,
+      timeline: '2025',
+      role: 'UI/UX Designer',
+      overview: `UI/UX Designer (information architecture, wireframing, high-fidelity UI, and responsive layouts in Figma).
+
+Designed the complete workflow: NIM/NIP-based login with role access, an admin dashboard with summary metrics, a searchable letter archive with status tracking, letter preview with approve or reject actions, and user management.`,
+      tools: ['Figma'],
+      problem: `- Letter requests were handled through scattered manual processes, making it difficult to follow a submission's status or find past documents.
+- Administrators had no single view of incoming requests, users, and study program data, so everyday checks took extra effort.
+- Multiple letter types and approval states needed a consistent structure that remained easy to scan.`,
+      researchAndSolution: `- Mapped the end-to-end journey from a student submitting a request to an administrator reviewing, approving, and archiving it.
+- Grouped the interface around a clear sidebar: Dashboard, Arsip Surat, Total Prodi, Pengguna, Profile, and Logout.
+
+- Designed a dashboard with summary cards (Total Surat, Total Prodi, Total Pengguna) and a searchable letter table with clear Diproses and Selesai status badges.
+- Built a focused preview flow with Setuju/Tolak decisions and an archive organized by request type, including magang, observasi, pinjam ruang, and surat tugas.
+- Used a consistent blue-and-white visual system with straightforward forms and tables so administrative tasks stay quick and readable.`,
+      learnings: `- Learned how to translate an administrative workflow into a clear interface with well-defined status states and decision points.
+- Strengthened skills in designing data-heavy internal tools where clarity and speed matter more than visual decoration.`,
     },
   },
 ]

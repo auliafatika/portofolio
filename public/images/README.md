@@ -22,12 +22,14 @@ Tiap folder project berisi satu showcase, dan gambar design process masuk ke sub
 Nama file yang terpasang saat ini:
 
 - **KOLABORASI** — `showcase.webp`; `design-process/{design-system,lofi,hifi%20new,prototyping}.webp` (step IA teks saja)
+- **Air Bersih Untuk Semua** — `showcase.webp` saja; tanpa gambar `design-process/`, sehingga bagian Design process tidak ditampilkan di halaman case study
+- **Sirata** — `showcase.webp` saja; tanpa gambar `design-process/`, sehingga bagian Design process tidak ditampilkan di halaman case study
 - **Joynest** — `showchase.webp`; `design-process/{IA,user%20flow,design-system,lofi,hifi,prototyping}.webp`
 - **Perhutani** — `showcase.webp`, `design%20before.webp`; `design-process/{design%20system,lofi,hifi}.webp`
 - **Novacare** — `showcase.webp`; `design-process/{design%20system,lofi,hifi}.webp`
 - **Pantausiswa** — `showcase.webp`; `design-process/{userflow,design%20system,lofi,hifi,prototyping}.webp`
 
-`<slug>` salah satu dari: `kolaborasi`, `joynest`, `perhutani`, `novacare`, `pantausiswa`.
+`<slug>` salah satu dari: `kolaborasi`, `joynest`, `perhutani`, `novacare`, `pantausiswa`, `air-bersih-untuk-semua`, `sirata`.
 
 ## Menambah / mengganti gambar
 

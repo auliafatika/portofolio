@@ -5,13 +5,16 @@ import Media from './Media'
 import RichText from './RichText'
 
 export default function ProjectPage({ project }: { project: Project }) {
-  const processSteps: [string, ProcessStep][] = [
-    ['Information architecture', project.detail.process.ia],
-    ['Design system', project.detail.process.designSystem],
-    ['Low-fidelity wireframes', project.detail.process.loFi],
-    ['High-fidelity design', project.detail.process.hiFi],
-    ['Prototyping', project.detail.process.prototyping],
-  ]
+  const process = project.detail.process
+  const processSteps: [string, ProcessStep][] = process
+    ? [
+        ['Information architecture', process.ia],
+        ['Design system', process.designSystem],
+        ['Low-fidelity wireframes', process.loFi],
+        ['High-fidelity design', process.hiFi],
+        ['Prototyping', process.prototyping],
+      ]
+    : []
 
   return (
     <main id="main" className="min-w-0 px-4 pt-8 pb-24 sm:px-8 md:px-12 md:pt-12 lg:px-16">
@@ -104,40 +107,42 @@ export default function ProjectPage({ project }: { project: Project }) {
             <RichText className="mt-4" text={project.detail.researchAndSolution} />
           </section>
 
-          <section data-reveal aria-labelledby="detail-process">
-            <h2 id="detail-process" className="font-display text-xl font-medium text-secondary">
-              Design process
-            </h2>
-            <ol className="mt-5 grid gap-4">
-              {processSteps.map(([defaultLabel, step], index) => {
-                const label = step.label ?? defaultLabel
-                return (
-                  <li key={label} className="rounded-card bg-surface/[0.03] p-card">
-                    <p className="font-mono text-label-md tabular-nums text-primary">
-                      {String(index + 1).padStart(2, '0')} / {label}
-                    </p>
-                    <div className="mt-6 grid gap-10">
-                      {step.images.map((image, imageIndex) => (
-                        <figure key={imageIndex} className="min-w-0">
-                          <Media
-                            asset={image}
-                            className="h-auto w-full rounded-card"
-                            placeholderLabel={`TODO: ${label.toLowerCase()} image ${imageIndex + 1}`}
-                          />
-                          {image.description && (
-                            <figcaption className="mt-5">
-                              <RichText text={image.description} />
-                            </figcaption>
-                          )}
-                        </figure>
-                      ))}
-                    </div>
-                    {step.description && <RichText className="mt-5" text={step.description} />}
-                  </li>
-                )
-              })}
-            </ol>
-          </section>
+          {process && (
+            <section data-reveal aria-labelledby="detail-process">
+              <h2 id="detail-process" className="font-display text-xl font-medium text-secondary">
+                Design process
+              </h2>
+              <ol className="mt-5 grid gap-4">
+                {processSteps.map(([defaultLabel, step], index) => {
+                  const label = step.label ?? defaultLabel
+                  return (
+                    <li key={label} className="rounded-card bg-surface/[0.03] p-card">
+                      <p className="font-mono text-label-md tabular-nums text-primary">
+                        {String(index + 1).padStart(2, '0')} / {label}
+                      </p>
+                      <div className="mt-6 grid gap-10">
+                        {step.images.map((image, imageIndex) => (
+                          <figure key={imageIndex} className="min-w-0">
+                            <Media
+                              asset={image}
+                              className="h-auto w-full rounded-card"
+                              placeholderLabel={`TODO: ${label.toLowerCase()} image ${imageIndex + 1}`}
+                            />
+                            {image.description && (
+                              <figcaption className="mt-5">
+                                <RichText text={image.description} />
+                              </figcaption>
+                            )}
+                          </figure>
+                        ))}
+                      </div>
+                      {step.description && <RichText className="mt-5" text={step.description} />}
+                    </li>
+                  )
+                })}
+              </ol>
+            </section>
+          )}
 
           <section data-reveal aria-labelledby="detail-learnings">
             <h2 id="detail-learnings" className="font-display text-xl font-medium text-secondary">

@@ -11,7 +11,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       <Media
         asset={project.showcase}
-        className={`aspect-[3/2] w-full rounded-card ${project.featured ? 'lg:aspect-[21/8]' : ''}`}
+        className={`aspect-[3/2] w-full rounded-card ${project.wideCard ? 'lg:aspect-[21/8]' : ''}`}
         placeholderLabel={`TODO: showcase ${project.title}`}
       />
       <h3 className="mt-5 font-display text-xl font-medium text-secondary">{project.title}</h3>
